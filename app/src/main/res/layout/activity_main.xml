@@ -1,64 +1,75 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <EditText
-        android:id="@+id/etNum1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="숫자 1" />
-
-    <EditText
-        android:id="@+id/etNum2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="숫자 2" />
+    android:padding="16dp">
 
     <TextView
-        android:id="@+id/tvResult"
-        android:layout_width="match_parent"
+        android:id="@+id/Text1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="bottom"
-        android:padding="16dp"
-        android:text="결과값 : "
+        android:text="애완동물 선택"
         android:textSize="24sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <CheckBox
+        android:id="@+id/ChkAgree"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_below="@+id/Text1"
+        android:layout_marginTop="14dp"
+        android:text="동의합니다" />
 
-        <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/Text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="좋아하는 애완동물을 선택하세요"
+        android:textSize="20sp"
+        android:layout_below="@+id/ChkAgree"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"/>
+
+    <RadioGroup
+        android:id="@+id/Rgroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Text2"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:id="@+id/RdoDog"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="더하기" />
+            android:text="강아지" />
 
-        <Button
-            android:id="@+id/btnSubtract"
-            android:layout_width="match_parent"
+        <RadioButton
+            android:id="@+id/RdoCat"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="빼기" />
+            android:text="고양이" />
 
-        <Button
-            android:id="@+id/btnMultiply"
-            android:layout_width="match_parent"
+        <RadioButton
+            android:id="@+id/RdoRabbit"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="곱하기" />
+            android:text="토끼" />
 
-        <Button
-            android:id="@+id/btnDivide"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="나누기" />
+    </RadioGroup>
 
-        <Button
-            android:id="@+id/btnMod"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="나머지" />
+    <Button
+        android:id="@+id/BtnOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:layout_below="@+id/Rgroup1"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"/>
 
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/ImgPet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BtnOK"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"/>
 
-</LinearLayout>
+</RelativeLayout>
